@@ -1,10 +1,13 @@
 .main-contents{
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
     height: 650px;
+
+    flex-direction: column;
 }
 .outer-background{
-    margin-top: 210px;
+    /* margin-top: 210px; */ /* aku dorong pake item atasnya*/ 
     display: block;
     padding: 25px;
     background-color: #FAFFF0;
@@ -13,6 +16,25 @@
     text-align: center;
     border-radius: 40px;
 }
+
+.prog-bar{
+    width: 350px;
+    height: 15px;
+
+    border-radius: 30px;
+
+    background-color: #B9B9B9;
+}
+
+.prog-bar-fill{
+    width: 0;
+    height: 15px;
+
+    border-radius: 30px;
+
+    background-color: #FAFFF0;
+}
+
 .question-bar {
     font-size: 20px;
     font-weight: 400;

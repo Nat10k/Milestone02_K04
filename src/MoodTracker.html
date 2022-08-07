@@ -30,15 +30,27 @@
         <!-- Bagian kotak pertanyaan -->
         <div class="main-contents">
             <!-- Bagian untuk progress bar -->
-            <div class="prog-bar"></div>
-
+            <div class="prog-bar">
+                <div class="prog-bar-fill" id="bar-fill"></div>    
+            </div>
             <div class="outer-background">
                 <p class="question-bar">Was your morning any good?</p>
-                <button class="red"></button>
-                <button class="green"></button>
-
+                <button class="red" id="red"></button>
+                <button class="green" id="green"></button>
             </div>
 
+            <script>
+                let score = Number(document.getElementById("bar-fill").style.width); // element to change
+                let maxScore = 10;
+
+                document.getElementById("red").onclick = () => {score-=1; 
+                    document.getElementById("bar-fill").style.width = String(100*score/maxScore)+"%";
+                };
+
+                document.getElementById("green").onclick = () => {score+=1; 
+                    document.getElementById("bar-fill").style.width = String(100*score/maxScore)+"%";
+                };
+            </script>
         </div>
         
     </body>
