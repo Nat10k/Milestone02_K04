@@ -2,8 +2,78 @@
 <html>
     <head>
         <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1">
-        <title>Be Well</title>
+        <title>E-Journal</title>
         <link rel="stylesheet" href="BaseStyle.css">
+        <style>
+            form {
+                text-align: left;
+                background-image: url("Diary\ Image.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                margin: 0 auto;
+                width: 60%;
+                height: 500px;
+            }
+
+            form input {
+                float: left;
+                width: 30%;
+                margin: 20px;
+                border: none;
+            }
+
+            form button {
+                position: relative;
+                box-sizing: border-box;
+                background-color: #9BC53D;
+                border: none;
+                outline: invert;
+                height: 50px;
+                width: 80px;
+                margin: 30px;
+                border: 1px solid #000000;
+                backdrop-filter: blur(4px);
+                cursor: pointer;
+            }
+
+            form button:hover {
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            }
+
+            form textarea {
+                float: left;
+                margin: 20px;
+                width: 70%;
+                height: 400px;
+                border: none;
+            }
+        </style>
+        <script>
+            function saveDiary(filename,date,content) {
+                const element = document.createElement('a');
+                const blob = new Blob([date, content], { type: 'plain/text' });
+                const fileUrl = URL.createObjectURL(blob);
+                element.setAttribute('href', fileUrl);
+                element.setAttribute('download', filename);
+                element.style.display = 'none';
+                document.body.appendChild(element);
+                element.click();
+                document.body.removeChild(element);
+            };
+
+            window.onload = () => {
+                document.getElementById('Save').
+                addEventListener('click', e => {
+                    const date = document.getElementById('Date').value;
+                    const diary = "\n" + document.getElementById('Diary').value;
+                    const filename = prompt("Enter file name");
+
+                    if (filename && diary) {
+                        saveDiary(filename,date,diary);
+                    }
+                });
+            };
+        </script>
     </head>
     <body>
         <nav>
@@ -27,5 +97,12 @@
         </nav>
         <div class="background-rectangle">
         </div>
+        <h1>E-Journal</h1>
+        <p>Write down your thoughts here, let everything out as much as you want</p>
+        <form action="#">
+            <input type="text" placeholder="Date" id="Date">
+            <textarea rows="6" columns="80" id="Diary" spellcheck="false" placeholder="Write here"></textarea>
+            <button id="Save">Save</button>
+        </form>
     </body>
 </html>
