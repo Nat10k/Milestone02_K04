@@ -4,16 +4,17 @@
         <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1">
         <title>E-Journal</title>
         <link rel="stylesheet" href="BaseStyle.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
         <style>
             form {
                 text-align: left;
                 background-image: url("Diary\ Image.jpg");
+                border-radius: 0.5rem;
                 background-repeat: no-repeat;
                 background-size: cover;
                 margin: 0 auto;
                 width: 60%;
-                height: 500px;
+                height: 31rem;
             }
 
             form input {
@@ -48,7 +49,41 @@
                 height: 400px;
                 border: none;
             }
+
+            #Diary, #Date {
+                padding: 0.25rem;
+                padding-left: 1rem;
+                padding-top: 0.25rem;
+                margin-bottom: 0.2rem;
+                background: white;
+                border-radius: 0.5rem;
+                border-color: transparent;
+                font-size: 1rem;
+                flex: 1 0 auto;
+                color: black;
+                font-family: 'Inter';
+            }
+
+            #Diary {
+                padding-top: 0.75rem;
+                min-height: 20rem;
+                max-height: 20rem;
+                min-width: 35rem;
+                max-width: 35rem;
+            }
+
+            #Save {
+                padding: 0.5rem;
+                margin-top: 1rem;
+                /* margin-left: 1rem; */
+                background: #9BC53D;
+                border-radius: 0.5rem;
+                border-color: #9BC53D;
+                color: black;
+                font-family: var(--ff-secondary);
+            }
         </style>
+
         <script>
             function saveDiary(filename,date,content) {
                 const element = document.createElement('a');
@@ -76,6 +111,7 @@
             };
         </script>
     </head>
+
     <body>
         <nav>
             <a href="Homepage.html"><img src="Logo.png" class="logo"></a>
@@ -105,7 +141,7 @@
         <p>Write down your thoughts here, let everything out as much as you want</p>
         <form action="#">
             <input type="text" placeholder="Date" id="Date">
-            <textarea rows="6" columns="80" id="Diary" spellcheck="false" placeholder="Share your thoughts!"></textarea>
+            <textarea rows="6" columns="80" id="Diary" spellcheck="false" maxlength="2000" placeholder="Share your thoughts!"></textarea>
             <button id="Save">Save</button>
         </form>
     </body>
