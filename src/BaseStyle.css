@@ -9,5 +9,71 @@ body {
 }
 
 nav {
-    height : 40px;
+    height : 50px;
+    padding-bottom: 10px;
+    overflow: hidden;
+}
+
+.logo {
+    display: block;
+    height: 100%;
+    float: left;
+}
+
+.links {
+    float: right;
+    overflow: hidden;
+}
+
+.links a {
+    float: left;
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropdownbtn {
+    font-size: 20px;
+    border: none;
+    outline: none;
+    background-color: inherit;
+    font-family: inherit;
+    padding: 20px;
+    margin: 0;
+}
+
+.services {
+    display: none;
+    position: absolute;
+    background-color: inherit;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.services a {
+    float: none;
+    color: black;
+    padding: 20px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+
+.dropdownbtn:hover .services {
+    display: block;
+}
+
+.background-rectangle {
+    background-color: #9BC53D;
+    height: 382px;
+    width:100%;
 }
