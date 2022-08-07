@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+html {
+    font-family: 'Inter', Courier, monospace;
+}
+
+body {
+    background-color: #FFF7E1;
+}
+
+nav {
+    height : 40px;
+}
