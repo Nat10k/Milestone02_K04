@@ -36,7 +36,9 @@ nav {
 
 .dropdown {
     float: left;
+    display:block;
     overflow: hidden;
+    height: 50px;
 }
 
 .dropdown .dropdownbtn {
@@ -67,13 +69,12 @@ nav {
     text-align: left;
 }
 
-
-.dropdownbtn:hover .services {
+.dropdown:hover .services {
     display: block;
 }
 
 .background-rectangle {
     background-color: #9BC53D;
     height: 382px;
-    width:100%;
+    width: 100%;
 }
