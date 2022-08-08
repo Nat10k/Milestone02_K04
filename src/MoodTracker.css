@@ -1,3 +1,13 @@
+@keyframes question {
+    from {font-size: 0px;}
+    to {font-size: 20px;}
+}
+@keyframes button {
+    from {width: 0px;
+        height: 0px;}
+    to {width: 95.59px;
+        height: 96.22px;}
+}
 .main-contents{
     display: flex;
     align-items: center;
@@ -8,6 +18,7 @@
 }
 .outer-background{
     /* margin-top: 210px; */ /* aku dorong pake item atasnya*/ 
+    
     display: block;
     padding: 25px;
     background-color: #FAFFF0;
@@ -18,28 +29,30 @@
 }
 
 .prog-bar{
-    width: 350px;
+    width: 550px;
     height: 15px;
-
     border-radius: 30px;
-
     background-color: #B9B9B9;
 }
 
 .prog-bar-fill{
     width: 0;
     height: 15px;
-
     border-radius: 30px;
-
     background-color: #FAFFF0;
 }
 
 .question-bar {
+    animation-name: question;
+    animation-duration: 0.5s;
     font-size: 20px;
     font-weight: 400;
 }
+
+
 .red {
+    animation-name: button;
+    animation-duration: 1.25s;
     margin-top: 40px;
     margin-right: 34px;
     width: 95.59px;
@@ -47,12 +60,14 @@
     border-radius: 15.26px;
     border: none;
     background-color: #FF5E5E;
+    
 }
 .red:hover{
     background-color:#fa8989;
 }
 .green {
-    
+    animation-name: button;
+    animation-duration: 1.25s;
     width: 95.59px;
     height: 96.22px;
     border-radius: 15.26px;
