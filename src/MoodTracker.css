@@ -48,13 +48,11 @@
     font-size: 20px;
     font-weight: 400;
 }
-
-
 .red {
     animation-name: button;
     animation-duration: 1.25s;
     margin-top: 40px;
-    margin-right: 34px;
+    margin-right: 25px;
     width: 95.59px;
     height: 96.22px;
     border-radius: 15.26px;
@@ -64,10 +62,13 @@
 }
 .red:hover{
     background-color:#fa8989;
+    border: 3px solid #FF5E5E;
 }
 .green {
     animation-name: button;
     animation-duration: 1.25s;
+    margin-top: 40px;
+    margin-left: 25px;
     width: 95.59px;
     height: 96.22px;
     border-radius: 15.26px;
@@ -76,4 +77,5 @@
 }
 .green:hover{
     background-color: #39c20c;
+    border: 3px solid #60AD47;
 }
