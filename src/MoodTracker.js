@@ -3,6 +3,11 @@ let current_index = 0;
 const red_button = document.getElementById("red")
 const green_button = document.getElementById("green")
 
+const start_button = document.getElementById("start-button")
+const start_prompt = document.querySelector(".start-prompt")
+const prog_bar = document.querySelector(".prog-bar")
+const outer_bg = document.querySelector(".outer-background")
+
 const arr_of_question = ['Was your morning any good?','Question No. 2','Question No. 3','Question No. 4'
 ,'Question No. 5','Question No. 6','Question No. 7','Question No. 8','Question No. 9','Question No. 10'];
 
@@ -30,6 +35,16 @@ function resetAnimation() {
     question_bar_animation.style.animation = null;
 }
 
+// function toggleHidden(doc){
+//     doc.classList.toggle("hidden")
+//     // console.log(doc.classList.contains("hidden"))
+// }
+
+const setActive = (elmt, value = true) => {
+    if(value) {elmt.classList.remove("hidden"); elmt.style.pointerEvents = "initial"}
+    else {elmt.classList.add("hidden"); elmt.style.pointerEvents = "none"}
+}
+
 red_button.onclick = () => {
     current_index++;
     if (current_index < 10){
@@ -48,4 +63,14 @@ green_button.onclick = () => {
     }
 }
 
+window.onload = () => { // initiate
+    setActive(outer_bg, false);
+    setActive(prog_bar, false)
+    // setActive(start_prompt, false)
+}
 
+start_button.onclick = () =>{
+    setActive(outer_bg)
+    setActive(prog_bar)
+    setActive(start_prompt, false)
+}
