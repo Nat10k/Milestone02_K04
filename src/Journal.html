@@ -2,9 +2,117 @@
 <html>
     <head>
         <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1">
-        <title>Be Well</title>
+        <title>E-Journal</title>
         <link rel="stylesheet" href="BaseStyle.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <style>
+            form {
+                text-align: left;
+                background-image: url("Diary\ Image.jpg");
+                border-radius: 0.5rem;
+                background-repeat: no-repeat;
+                background-size: cover;
+                margin: 0 auto;
+                width: 60%;
+                height: 31rem;
+            }
+
+            form input {
+                float: left;
+                width: 30%;
+                margin: 20px;
+                border: none;
+            }
+
+            form button {
+                position: relative;
+                box-sizing: border-box;
+                background-color: #9BC53D;
+                border: none;
+                outline: invert;
+                height: 50px;
+                width: 80px;
+                margin: 30px;
+                border: 1px solid #000000;
+                backdrop-filter: blur(4px);
+                cursor: pointer;
+            }
+
+            form button:hover {
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            }
+
+            form textarea {
+                float: left;
+                margin: 20px;
+                width: 70%;
+                height: 400px;
+                border: none;
+            }
+
+            #Diary, #Date {
+                padding: 0.25rem;
+                padding-left: 1rem;
+                padding-top: 0.25rem;
+                margin-bottom: 0.2rem;
+                background: white;
+                border-radius: 0.5rem;
+                border-color: transparent;
+                font-size: 1rem;
+                flex: 1 0 auto;
+                color: black;
+                font-family: 'Inter';
+            }
+
+            #Diary {
+                padding-top: 0.75rem;
+                min-height: 20rem;
+                max-height: 20rem;
+                min-width: 35rem;
+                max-width: 35rem;
+            }
+
+            #Save {
+                padding: 0.5rem;
+                margin-top: 1rem;
+                /* margin-left: 1rem; */
+                background: #9BC53D;
+                border-radius: 0.5rem;
+                border-color: #9BC53D;
+                color: black;
+                font-family: 'Inter';
+            }
+        </style>
+
+        <script>
+            function saveDiary(filename,date,content) {
+                const element = document.createElement('a');
+                const blob = new Blob([date, content], { type: 'plain/text' });
+                const fileUrl = URL.createObjectURL(blob);
+                element.setAttribute('href', fileUrl);
+                element.setAttribute('download', filename);
+                element.style.display = 'none';
+                document.body.appendChild(element);
+                element.click();
+                document.body.removeChild(element);
+            };
+
+            window.onload = () => {
+                document.getElementById('Save').
+                addEventListener('click', e => {
+                    const date = document.getElementById('Date').value;
+                    const diary = "\n" + document.getElementById('Diary').value;
+                    const filename = prompt("Enter file name");
+
+                    if (filename && diary) {
+                        saveDiary(filename,date,diary);
+                    }
+                });
+            };
+        </script>
     </head>
+
     <body>
         <nav>
             <a href="Homepage.html"><img src="Logo.png" class="logo"></a>
@@ -25,7 +133,17 @@
                 <a href="MentalHealth.html">Contact Help</a>
             </div>
         </nav>
+
         <div class="background-rectangle">
+
         </div>
+
+        <h1>E-Journal</h1>
+        <p>Write down your thoughts here, let everything out as much as you want</p>
+        <form action="#">
+            <input type="text" placeholder="Date" id="Date">
+            <textarea rows="6" columns="80" id="Diary" spellcheck="false" maxlength="2000" placeholder="Share your thoughts!"></textarea>
+            <button id="Save">Save</button>
+        </form>
     </body>
 </html>

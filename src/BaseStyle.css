@@ -17,6 +17,7 @@ nav {
     padding-bottom: 0.7rem;
     background-color: #FFF7E1;
     transform: scale(1.011) translateY(-0.5rem);
+    position: sticky;
 }
 
 .logo {
@@ -35,6 +36,7 @@ nav {
 /* Links inside the navbar */
 .navbar a {
     float: left;
+    display: block;
     font-size: 20px;
     color: black;
     text-align: center;
@@ -105,4 +107,17 @@ nav {
     position: fixed;
     transform: scale(1.3) translateX(-2rem) translateY(-6rem) rotate(-3deg);
     z-index: -2;
+}
+
+h1, p {
+    color: #FFF7E1;
+    text-align: center;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+p {
+    font-size: 20px;
 }
