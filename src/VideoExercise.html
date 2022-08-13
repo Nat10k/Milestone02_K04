@@ -20,7 +20,7 @@
                 display: block;
             }
 
-            button {
+            .previous {
                 box-sizing: border-box;
                 width: 40px;
                 height: 40px;
@@ -28,19 +28,19 @@
                 background-color: transparent;
                 cursor: pointer;
                 display: block;
-            }
-
-            button:hover {
-                background-color: #dbc68b;
-            }
-
-            .previous {
                 border-width: 20px 40px 20px 0px;
                 border-color: transparent #9BC53D transparent transparent;
                 margin-right: 20px;
             }
 
             .next {
+                box-sizing: border-box;
+                width: 40px;
+                height: 40px;
+                border-style: solid;
+                background-color: transparent;
+                cursor: pointer;
+                display: block;
                 border-width: 20px 0px 20px 40px;
                 border-color: transparent transparent transparent #9BC53D;
                 margin-left: 20px;
@@ -129,9 +129,8 @@
         </div>
         <div class="videoContainer">
             <button class="previous" id="previous"></button>
-            <iframe width="60%" height="450px" src="https://www.youtube.com/embed/86m4RC_ADEY" title="Meditation Video" id="video"></iframe>
+            <iframe width="50%" height="450px" src="https://www.youtube.com/embed/86m4RC_ADEY" title="Mental Exercise Video" id="video"></iframe>
             <button class="next" id="next"></button>
         </div>
-</iframe>
     </body>
 </html>
