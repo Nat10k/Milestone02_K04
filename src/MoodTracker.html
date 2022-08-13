@@ -34,15 +34,24 @@
                 <div class="prog-bar-fill" id="bar-fill"></div>    
             </div>
             <div class="outer-background">
+                
                 <p class="question-bar" id="question-bar">Was your morning any good?</p>
-                <button class="red" id="red" ></button>
-                <button class="green" id="green" ></button>
+                <div class = "outer-background-contents">
+                    <button class="red" id="red" ></button>
+                    <button class="green" id="green" ></button>
+                </div>
             </div>
 
             <div class="start-prompt">
                 <div>Mood Tracker Quiz!</div>
                 <button id="start-button" >Mulai</button>
-                <button type="submit">History</button>
+                <button type="submit" onclick="get_history()">History</button>
+            </div>
+            <div class="result-prompt">
+                <div>Here's Your Result!</div>
+                <div id="result-bar">Score : </div>
+                <button id="restart-button" onclick="restart()">Retake Quiz!</button>
+                <a href="Homepage.html"><button type="submit">Back to Homepage</button></a>
             </div>
 
 
