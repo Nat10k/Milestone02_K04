@@ -21,7 +21,7 @@
             form input {
                 float: left;
                 width: 30%;
-                margin: 20px;
+                margin: 1.2rem;
                 border: none;
             }
 
@@ -31,16 +31,18 @@
                 background-color: #9BC53D;
                 border: none;
                 outline: invert;
-                height: 50px;
+                height: 3rem;
                 width: 80px;
                 margin: 30px;
                 border: 1px solid #000000;
                 backdrop-filter: blur(4px);
                 cursor: pointer;
+                transition: 20ms ease;
             }
 
             form button:hover {
-                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                box-shadow: 1px 2px 1px 2px rgba(0, 0, 0, 0.2);
+                transform: scale(1.05);
             }
 
             form textarea {
@@ -67,16 +69,22 @@
 
             #Diary {
                 padding-top: 0.75rem;
-                min-height: 20rem;
                 max-height: 20rem;
-                min-width: 35rem;
                 max-width: 35rem;
+            }
+
+            /* Device size handling */
+            @media screen and (min-width: 1030px) {
+            #Diary {
+                min-width: 35rem;
+                min-height: 20rem;
+                }
             }
 
             #Save {
                 padding: 0.5rem;
                 margin-top: 1rem;
-                /* margin-left: 1rem; */
+                flex: none;
                 background: #9BC53D;
                 border-radius: 0.5rem;
                 border-color: #9BC53D;
