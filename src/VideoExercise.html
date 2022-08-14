@@ -46,59 +46,6 @@
                 margin-left: 20px;
             }
         </style>
-        <script>
-            const types = ["Meditation", "Physical"];
-            const videos = ["https://www.youtube.com/embed/86m4RC_ADEY", "https://www.youtube.com/embed/z_JlCQOSI2A"];
-            i = 0;
-            video = document.querySelector("#video");
-            title = document.querySelector("#title");
-
-            // assign function to buttons
-            document.querySelector("#previous").addEventListener("click", previous);
-            document.querySelector("#next").addEventListener("click", test);
-
-            function test() {
-                console.log("You clicked me");
-            }
-
-            function next() {
-                // increment index 
-                if (i >= types.length()) {
-                    i = 0;
-                }
-                else {
-                    i++;
-                }
-                
-                // change type and video
-                if (types[i] == "Meditation") {
-                    title.innerHTML = "Meditation Video";
-                }
-                else if (types[i] == "Physical") {
-                    title.innerHTML = "Physical Exercise Video";
-                }
-                video.src = videos[i];
-            }
-
-            function previous() {
-                // decrement index 
-                if (i <= 0) {
-                    i = types.length()-1;
-                }
-                else {
-                    i--;
-                }
-                
-                // change type and video
-                if (types[i] == "Meditation") {
-                    title.innerHTML = "Meditation Video";
-                }
-                else if (types[i] == "Physical") {
-                    title.innerHTML = "Physical Exercise Video";
-                }
-                video.src = videos[i];
-            }
-        </script>
     </head>
     <body>
         <nav>
@@ -132,5 +79,61 @@
             <iframe width="50%" height="450px" src="https://www.youtube.com/embed/86m4RC_ADEY" title="Mental Exercise Video" id="video"></iframe>
             <button class="next" id="next"></button>
         </div>
+
+        <script>
+            const types = ["Meditation", "Breathing", "Yoga"];
+            const videos = ["https://www.youtube.com/embed/86m4RC_ADEY", "https://www.youtube.com/embed/tEmt1Znux58", "https://www.youtube.com/embed/hJbRpHZr_d0"];
+            i = 0;
+            video = document.querySelector("#video");
+            title = document.querySelector("#title");
+
+            // assign function to buttons
+            document.querySelector("#previous").addEventListener("click", previous);
+            document.querySelector("#next").addEventListener("click", next);
+
+            function next() {
+                // increment index 
+                if (i >= types.length-1) {
+                    i = 0;
+                }
+                else {
+                    i++;
+                }
+                
+                // change type and video
+                if (types[i] == "Meditation") {
+                    title.innerHTML = "Meditation Exercise";
+                }
+                else if (types[i] == "Breathing") {
+                    title.innerHTML = "Breathing Exercise";
+                }
+                else if (types[i] == "Yoga") {
+                    title.innerHTML = "Yoga Exercise";
+                }
+                video.src = videos[i];
+            }
+
+            function previous() {
+                // decrement index 
+                if (i <= 0) {
+                    i = types.length-1;
+                }
+                else {
+                    i--;
+                }
+                
+                // change type and video
+                if (types[i] == "Meditation") {
+                    title.innerHTML = "Meditation Video";
+                }
+                else if (types[i] == "Breathing") {
+                    title.innerHTML = "Breathing Exercise";
+                }
+                else if (types[i] == "Yoga") {
+                    title.innerHTML = "Yoga Exercise";
+                }
+                video.src = videos[i];
+            }
+        </script>
     </body>
 </html>
