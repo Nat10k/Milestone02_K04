@@ -72,7 +72,7 @@
         <h1>Exercise Videos</h1>
         <p>Watch and do exercises to help you take control</p>
         <div class="titleContainer">
-            <p id="title">Meditation Video</p>
+            <p id="title">Meditation Exercise</p>
         </div>
         <div class="videoContainer">
             <button class="previous" id="previous"></button>
@@ -101,15 +101,7 @@
                 }
                 
                 // change type and video
-                if (types[i] == "Meditation") {
-                    title.innerHTML = "Meditation Exercise";
-                }
-                else if (types[i] == "Breathing") {
-                    title.innerHTML = "Breathing Exercise";
-                }
-                else if (types[i] == "Yoga") {
-                    title.innerHTML = "Yoga Exercise";
-                }
+                title.innerHTML = types[i] + " Exercise";
                 video.src = videos[i];
             }
 
@@ -123,15 +115,7 @@
                 }
                 
                 // change type and video
-                if (types[i] == "Meditation") {
-                    title.innerHTML = "Meditation Video";
-                }
-                else if (types[i] == "Breathing") {
-                    title.innerHTML = "Breathing Exercise";
-                }
-                else if (types[i] == "Yoga") {
-                    title.innerHTML = "Yoga Exercise";
-                }
+                title.innerHTML = types[i] + " Exercise";
                 video.src = videos[i];
             }
         </script>
