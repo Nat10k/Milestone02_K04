@@ -37,3 +37,20 @@
 	line-height: 29px;
 }
 
+#container{
+	background-color:#60AC48;
+	border: 5px;
+	height: 205px;
+	width: 1110px;
+	margin: 0 auto;
+	text-align: center;
+
+}
+
+#output{
+	color:  white;
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 30px;
+}
