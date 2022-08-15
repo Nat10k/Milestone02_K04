@@ -44,8 +44,8 @@
 
             <div class="start-prompt">
                 <div>Mood Tracker Quiz!</div>
-                <button id="start-button" >Mulai</button>
-                <button id="history-button" type="submit" onclick="get_history()">History</button>
+                <button id="start-button" class="default-button">Start Quiz!</button>
+                <button id="history-button" type="submit" onclick="get_history()" class="default-button">History</button>
             </div>
             <div class="history-prompt">
                 <div>History</div>
@@ -60,13 +60,13 @@
                         <div alt="barx" id="all-result-bar"></div>
                     </div>
                 </div>
-                <button id="restart-button" onclick="restart()">Back</button>
+                <button id="restart-button" onclick="restart()" class="default-button">Back</button>
             </div>
             <div class="result-prompt">
                 <div>Here's Your Result!</div>
                 <div id="result-bar">Score : </div>
-                <button id="restart-button" onclick="restart()">Retake Quiz!</button>
-                <a href="Homepage.html"><button type="submit">Back to Homepage</button></a>
+                <button id="restart-button" onclick="restart()" class="default-button">Retake Quiz!</button>
+                <a href="Homepage.html"><button type="submit" class="default-button">Back to Homepage</button></a>
             </div>
 
 

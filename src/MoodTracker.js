@@ -8,6 +8,7 @@ let result_bar = document.getElementById('result-bar')
 const prog_bar = document.querySelector(".prog-bar")
 const outer_bg = document.querySelector(".outer-background")
 const outer_bg_contents = document.querySelector('.outer-background-contents')
+const result_arr = ['Happy' , 'Neutral' , 'Sad']
 
 // for user history
 var history_score = JSON.parse(localStorage.getItem("history_array"));
@@ -68,11 +69,20 @@ const timeout = (millis) => {
 const result = (score, condition) => {
     history_score.push(score)
     localStorage.setItem("history_array", JSON.stringify(history_score));
-    
     setActive(result_prompt);
     setActive(outer_bg , condition);
     setActive(prog_bar, condition);
-    result_bar.textContent += ' ' + score + '/10';
+    if (score < 4) {
+        result_bar.innerText = 'Current Mood: ' + result_arr[2];
+    } 
+    else {
+        if (score < 8){
+            result_bar.innerText = 'Current Mood: ' + result_arr[1];
+        }
+        else{
+            result_bar.innerText = 'Current Mood: ' + result_arr[0];
+        }
+    }
 }
 
 
@@ -135,8 +145,8 @@ const get_history = () => {
         result_total += history_score[i]
     }
 
-    result_last = history_score[history_score.length-1]
-    result_mean = result_total /= history_score.length
+    result_last = history_score[history_score.length-1].toFixed(3)
+    result_mean = (result_total /= history_score.length).toFixed(3)
     // console.log(result_mean, result_total)
 
     last_result_bar.style.width = String(result_last) + "em"

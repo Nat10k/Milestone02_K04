@@ -12,6 +12,14 @@
     from {transform: rotate(0deg);color: red;}
     to {transform: rotate(360deg);color: greenyellow;}
 }
+@keyframes text{
+    from {color: black; width: 200px; height: 25px; font-size: 15px;}
+    to {color : #73d44a; width: 250px; height: 40px; font-size: 25px;}
+}
+@keyframes history-bar {
+    from {width: 0px;}
+}
+
 .stop{
     font-size: 20px;
 }
@@ -135,8 +143,23 @@
     animation-timing-function:ease-in-out;
 }
 
-
-
+.default-button{
+    background-color: #FFF7E1;
+    border-radius: 20px;
+    width: 200px;
+    border: none;
+    height: 25px;
+    font-size: 15px;
+}
+.default-button:hover{
+    animation-name: text;
+    animation-duration: 0.25s;
+    animation-timing-function: ease-in-out;
+    color: #73d44a;
+    font-size: 25px;
+    width: 250px;
+    height: 40px;
+}
 
 #last-result, #all-result{
     display: flex;
@@ -149,6 +172,8 @@
 }
 
 #last-result-bar, #all-result-bar{
+    animation-name: history-bar;
+    animation-duration: 2.5s;
     width: 5em;
     height: 1em;
     background-color: red;
