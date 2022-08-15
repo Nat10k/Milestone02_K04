@@ -5,6 +5,62 @@
         <title>Be Well</title>
         <link rel="stylesheet" href="BaseStyle.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            .storyPic {
+                float: right;
+                width: 30%;
+            }
+
+            .story {
+                margin: 50px;
+                color: black;
+                white-space: pre-wrap;
+            }
+
+            .storyContainer {
+                width: 80%;
+                padding: 0 150px;
+                margin-top: 50px;
+            }
+
+            .title {
+                text-align: center;
+            }
+
+            .source {
+                font-size: 12px;
+                color: black;
+                text-align: left;
+            }
+
+            .previous {
+                float: left;
+                box-sizing: border-box;
+                width: 140px;
+                height: 40px;
+                border-style: solid;
+                background-color: transparent;
+                cursor: pointer;
+                display: block;
+                border-width: 20px 40px 20px 0px;
+                border-color: transparent #9BC53D transparent transparent;
+                margin: 20px;
+            }
+
+            .next {
+                float: right;
+                box-sizing: border-box;
+                width: 140px;
+                height: 40px;
+                border-style: solid;
+                background-color: transparent;
+                cursor: pointer;
+                display: block;
+                border-width: 20px 0px 20px 40px;
+                border-color: transparent transparent transparent #9BC53D;
+                margin: 20px;
+            }
+        </style>
     </head>
     <body>
         <nav>
@@ -28,5 +84,71 @@
         </nav>
         <div class="background-rectangle">
         </div>
+        <h1>Inspiring Stories</h1>
+        <p>Read about people who have overcome their lowest points</p>
+        <div class="storyContainer">
+            <h2 class="title">Megan Anderson</h2>
+            <img src="Megan Anderson.png" class="storyPic">
+            <p class="story">Megan Anderson mengatakan, ketika usianya 9 tahun, dia pernah berdiri di koridor sekolah dan kehilangan fokus.Megan lalu pingsan selama lebih dari 1 jam. Ketika terbangun, dia menemukan tubuhnya kejang tidak terkendali.Dia diketahui mengidap kejang psikogenik. Selama bertahun-tahun, Megan membiarkan penyakitnya itu menguasai dirinya.Namun, Megan mulai menyadari bahwa dia harus bangkit. Dia lalu mulai menemukan mimpinya dan berusaha mengejarnya.
+                <br>Megan punya mimpi untuk meningkatkan kesadaran tentang betapa pentingnya kesehatan mental. Megan merasakan sendiri, kondisi gangguan jiwanya disalahpahami oleh banyak orang.Dia lalu menggalakkan kampanye tentang pentingnya kesadaran tentang kesehatan mental.
+            </p>
+            <p class="source">https://www.orami.co.id/magazine/5-kisah-anak-yang-mengalami-gangguan-jiwa-ini-penyebabnya</p>
+        </div>
+        <button class="previous">Previous Story</button>
+        <button class="next">Next Story</button>
+
+        <script>
+            const stories = {"Megan Anderson" : "Megan Anderson mengatakan, ketika usianya 9 tahun, dia pernah berdiri di koridor sekolah dan kehilangan fokus.Megan lalu pingsan selama lebih dari 1 jam. Ketika terbangun, dia menemukan tubuhnya kejang tidak terkendali.Dia diketahui mengidap kejang psikogenik. Selama bertahun-tahun, Megan membiarkan penyakitnya itu menguasai dirinya.Namun, Megan mulai menyadari bahwa dia harus bangkit. Dia lalu mulai menemukan mimpinya dan berusaha mengejarnya.\n\nMegan punya mimpi untuk meningkatkan kesadaran tentang betapa pentingnya kesehatan mental. Megan merasakan sendiri, kondisi gangguan jiwanya disalahpahami oleh banyak orang.Dia lalu menggalakkan kampanye tentang pentingnya kesadaran tentang kesehatan mental.",
+                             "Justice King" : "Justice King tumbuh seperti anak pada umumnya. Namun, orang di sekitarnya memperlakukan dia seperti orang asing.Hal itu terjadi saat Justice berusia 10 tahun tepat saat ibunya pergi demi pria lain.Ketika hal itu terjadi, banyak pertanyaan yang tidak bisa Justice tanyakan. Banyak juga pertanyaan yang tidak terjawab.Ini membuat Justice sedih hingga terlarut. Dia terus menangis.\n\nKetika usianya menginjak 14 tahun, dia mulai melukai diri sendiri.Justice berharap, menyakiti fisik akan membuat sakit psikisnya sedikit terobati. Dia juga sempat berpikir untuk bunuh diri.\n\nSuatu hari, ayah Justice menemuinya, menghapus air matanya, dan mengatakan bahwa semua baik-baik saja. Hal itulah yang menguatkan Justice untuk bangkit.Justice kini terus mengampanyekan tentang kesadaran bunuh diri agar tidak ada anak lain yang melakukan hal bodoh seperti yang pernah dilakukannya.",
+                             "Anto" : 'Masa SMP seringkali dikatakan sebagai masa peralihan dari masa kanak-kanak ke remaja awal. Tidak heran jika pada usia SMP, kebanyakan anak lebih suka bermain dan memiliki pikiran yang simpel. Tapi tidak dengan Anto. Depresi itu datang ketika ia masih duduk di bangku SMP.\n\nSemuanya berawal ketika ia harus pindah ke luar kota karena tuntutan pekerjaan ayahnya. Ia harus meninggalkan rumah serta teman-temannya, dan pindah ke tempat baru. Setelah pindah ke luar kota, ternyata ia mengalami kesulitan menyesuaikan diri.\n\n"Ya namanya juga masih muda. Karena pindah dari Jakarta ke daerah, saya jadi punya superiority complex. Saya malah merendahkan yang di sana," ujar Anto kepada GueSehat. Karena sulitnya penyesuaian diri tersebut, ia mengalami stres berat.\n\nPikiran bunuh diri pun muncul pertama kali di pikirannya saat Anto kelas 3 SMP. Saat itu, ia dua kali mencoba bunuh diri. "Yang pertama minum obat pembasmi serangga, saya tenggak semua, tapi langsung muntah. Yang kedua kali, saya coba menyilet tangan, tapi karena sakit saya berhenti," jelas Anto. Karena kedua percobaan bunuh diri gagal, Anto merasa ia tidak bisa menyakiti diri sendiri. Alhasil, ia mulai menyakiti orang lain. "Saya brutal banget. Itu masa-masa yang tidak ingin saya ingat," ujarnya.\n\nAnto mulai menata kembali hidupnya di saat kelas 2 SMA. Ia mulai berhenti bersikap anarkis. Namun, depresi itu datang lagi setelah ia menikah di tahun 2011. Ada beberapa alasan yang menyebabkan depresinya kambuh, termasuk karena ia harus kehilangan pekerjaan di tahun 2014.\n\nSambil mencari pekerjaan baru, Anto menjadi driver salah satu perusahaan taksi online. Karena semakin putus asa, Anto sudah memutuskan akan bunuh diri jika nantinya uangnya habis dan ia belum mendapatkan pekerjaan. Ia tidak mau menjadi beban keluarga. Anto sudah menyiapkan 10 bungkus racun tikus untuk rencana bunuh dirinya tersebut. Ia bahkan sudah menetapkan tanggal dan menuliskan alasan kenapa ia mengambil keputusan tersebut.\n\nUntungnya, niat tersebut tidak terlaksanakan karena Anto akhirnya mendapat pekerjaan. Namun, pikiran bunuh diri kembali muncul ketika istrinya keguguran untuk kelima kalinya. Di saat niat bunuh diri menyelimuti pikiran Anto, seorang temannya membujuknya untuk ke psikiater. Meskipun ragu, akhirnya Anto mendengarkan kata temannya tersebut. Namun, ia menetapkan, jika hingga tanggal tindakan bunuh diri yang ditetapkan dirinya tidak kunjung membaik, maka ia akan mundur.\n\nSetelah ke psikiater, Anto diberikan obat oral. Setelah memulai pengobatan, ia juga meninggalkan rumah. Memang, hubungannya dengan istri semakin merenggang. Lagipula tidak ada satupun keluarga yang tahu tentang kondisinya.\n\nSetelah itu, Anto bergabung ke salah satu support group untuk orang-orang yang memiliki masalah psikologis. Sejak memulai pengobatan dan bergabung ke support group tersebut, kondisinya pun semakin membaik hingga saat ini.',
+                             "Yova Asyifa Jami" : "Yovania Asyifa Jami, dikenal sebagai Yova, merupakan seorang content creator di TikTok yang sering membahas mengenai masalah mental dan perjuangannya sendiri. Yova sendiri merupakan mantan pasien RSJ. Semua berawal dari masa kecil Yova yang mengalami penindasan. Setelah itu Yova memang sudah dibawa ke psikiater namun tidak berlangsung lama  dan tidak dicek secara rutin lagi setelah kondisi Yova membaik. Pada saat awal Yova duduk di bangku SMA , Yova sering merasakan bahwa ia tidak mengenali dirinya, merasakan dirinya sebagai orang lain, dan halusinasi. Orang tua Yova membawa Yova ke tempat ruqyah, tetapi hal tersebut tidak memberikan pengaruh apa-apa. Bahkan Yova mendapatkan perilaku yang kurang pantas. Pada akhirnya orang tua Yova sadar mengenai perawatan yang diperlukan Yova dan membawa ia ke RSJ. Yova dirawat di RSJ selama 21 hari. Setelah keluar dari RSJ, ia merasa bisa lebih terbuka dan lebih produktif. Yova pun dengan giat mencoba mengejar materi-materi yang tertinggal selama ia dirawat di RSJ selama satu bulan, sampai akhirnya diterima di Universitas Indonesia jurusan Hubungan Masyarakat dan menjadi mahasiswa yang aktif.",
+                             "I Made Suri Pandhu" : "Pada video yang ia unggah di youtube, Pandhu bercerita mengenai kisahnya yang sempat mengalami depresi. Pada akhir SMA, Pandhu merasakan pressure tentang kuliah di PTN karena saudara dan kedua orang tuanya merupakan alumni PTN. Pandhu pun belajar dengan rajin dan mengikuti bimbel, walau ia tidak merasa enjoy dengan pembelajaran tersebut. Pada saat hari H ujian, Pandhu merasa kesulitan mengerjakannya. Saat pengumuman tiba ia dinyatakan tidak lolos dan menempuh jalan yang lain yaitu masuk PTS. Awalnya Pandhu masih belum menerima kenyataan bahwa ia tidak lolos ke PTN sehingga ia mengalami demotivation dan mendapatkan nilai yang kurang baik di universitas yang ia jalankan saat itu. Pandhu pun pergi ke psikiater dan didiagnosa anxiety disorder dan depresi. Setelah mengalami pengobatan selama satu setengah tahun, Pandhu merasa jauh lebih baik. Ia menyadari jalan yang ia tempuh sekarang merupakan jalan yang terbaik dan mendapat banyak penghargaan di bidang non akademik. Pandhu juga berpesan bahwa ada banyak jalan menuju sukses dan semua orang memiliki jalan yang berbeda-beda."};
+            const images = ["Megan Anderson.png", "Justice King.png", "", "Yova Asyifa.png", "Pandhu.png"];
+            const sources = ["https://www.orami.co.id/magazine/5-kisah-anak-yang-mengalami-gangguan-jiwa-ini-penyebabnya","https://www.orami.co.id/magazine/5-kisah-anak-yang-mengalami-gangguan-jiwa-ini-penyebabnya", "https://www.guesehat.com/kisah-penderita-depresi", "https://www.youtube.com/watch?v=EwCDh129-T0", "https://www.youtube.com/watch?v=K2qzNUQAdCA"]
+
+            i = 0;
+            title = document.querySelector(".title");
+            story = document.querySelector(".story");
+            image = document.querySelector(".storyPic");
+            source = document.querySelector(".source");
+
+            // assign function to buttons
+            document.querySelector(".previous").addEventListener("click", previous);
+            document.querySelector(".next").addEventListener("click", next);
+
+            function next() {
+                // increment index 
+                if (i >= images.length-1) {
+                    i = 0;
+                }
+                else {
+                    i++;
+                }
+                
+                // change story, image, and title
+                currentKey = Object.keys(stories)[i];
+                title.innerHTML = currentKey;
+                story.innerHTML = stories[currentKey];
+                source.innerHTML = sources[i];
+                image.src = images[i];
+            }
+
+            function previous() {
+                // decrement index 
+                if (i <= 0) {
+                    i = images.length-1;
+                }
+                else {
+                    i--;
+                }
+                
+                // change story, image, and title
+                currentKey = Object.keys(stories)[i];
+                title.innerHTML = currentKey;
+                story.innerHTML = stories[currentKey];
+                source.innerHTML = sources[i];
+                image.src = images[i];
+            }
+        </script>
     </body>
 </html>
