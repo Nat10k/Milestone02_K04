@@ -38,19 +38,24 @@
 }
 
 #container{
-	background-color:#60AC48;
+	background:linear-gradient(to top, rgba(43, 43, 43, 0.2)50%,rgba(43, 43, 43, 0.2)50%), url(QuoteBG.jpg);
 	border: 5px;
-	height: 205px;
-	width: 1110px;
+	height: 180px;
+	width: 1111px;
 	margin: 0 auto;
 	text-align: center;
-    margin-top: 40px;
+    margin-top: 225px;
 }
 
 #output{
-	color:  white;
+	color:  #FFF7E1;
 	font-family: 'Inter';
 	font-style: normal;
 	font-weight: 700;
-	font-size: 30px;
+	font-size: 25px;
+}
+
+#btn{
+	background-color: #9BC53D;
+	border-color: #9BC53D;
 }
