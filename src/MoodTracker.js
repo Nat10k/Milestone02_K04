@@ -10,7 +10,10 @@ const outer_bg = document.querySelector(".outer-background")
 const outer_bg_contents = document.querySelector('.outer-background-contents')
 
 // for user history
-const history_score = [];
+var history_score = JSON.parse(localStorage.getItem("history_array"));
+const history_prompt = document.querySelector(".history-prompt")
+const last_result_bar = document.getElementById("last-result-bar")
+const all_result_bar = document.getElementById("all-result-bar")
 
 // for user progress
 let current_index = 0;
@@ -64,6 +67,8 @@ const timeout = (millis) => {
 // result
 const result = (score, condition) => {
     history_score.push(score)
+    localStorage.setItem("history_array", JSON.stringify(history_score));
+    
     setActive(result_prompt);
     setActive(outer_bg , condition);
     setActive(prog_bar, condition);
@@ -113,7 +118,7 @@ green_button.onclick = () => {
 }
 // restart quiz + store historical score to local
 const restart = () => {
-    localStorage.setItem("history_array",JSON.stringify(history_score));
+    localStorage.setItem("history_array",JSON.stringify(history_score)); //moved it to result()
     location.reload();
 }
 
@@ -122,7 +127,26 @@ const history_bar = document.getElementById('history-arr')
 const get_history = () => {
     let string_array = localStorage.getItem("history_array");
     history_score = JSON.parse(string_array);
-    return history_score;
+
+    document.querySelector(".history-prompt>div>span").innerHTML = history_score.length;
+
+    let result_mean = result_total = 0;
+    for (let i = 0; i<history_score.length;i++){
+        result_total += history_score[i]
+    }
+
+    result_last = history_score[history_score.length-1]
+    result_mean = result_total /= history_score.length
+    // console.log(result_mean, result_total)
+
+    last_result_bar.style.width = String(result_last) + "em"
+    all_result_bar.style.width = String(result_mean) + "em"
+
+    last_result_bar.innerHTML = result_last
+    all_result_bar.innerHTML = result_mean
+
+    setActive(history_prompt)
+    // return history_score;
 }
 
 window.onload = () => { // initiate
@@ -130,6 +154,8 @@ window.onload = () => { // initiate
     setActive(prog_bar, false);
     setActive(result_prompt, false);
     // setActive(start_prompt, false)
+
+    setActive(history_prompt, false);
 }
 
 start_button.onclick = () =>{
@@ -137,3 +163,4 @@ start_button.onclick = () =>{
     setActive(prog_bar)
     setActive(start_prompt, false)
 }
+
