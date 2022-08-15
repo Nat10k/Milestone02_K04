@@ -1,0 +1,56 @@
+.wrap .menu ul{
+	padding: 0;
+	margin: 0;
+	width: auto;
+	height: 45px;
+	background: #60AC48;
+	overflow: hidden;
+}
+ 
+.wrap .menu ul li{ /* Supaya tulisannya jadi horizontal */
+	float: left;
+	text-align: center;
+	list-style-type: none;
+	padding: 15px;
+
+}
+
+.wrap .menu ul li {
+	color:  white;
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 12px;
+}
+
+.logohome {
+	text-align: center;
+}
+
+
+.logohome p {
+	text-align: center;
+	font-family: 'Lato', sans-serif;
+	font-style: normal;
+	font-weight: 400px;
+	font-size: 24px;
+	line-height: 29px;
+}
+
+#container{
+	background-color:#60AC48;
+	border: 5px;
+	height: 205px;
+	width: 1110px;
+	margin: 0 auto;
+	text-align: center;
+    margin-top: 40px;
+}
+
+#output{
+	color:  white;
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 30px;
+}
