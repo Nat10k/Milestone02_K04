@@ -20,8 +20,8 @@ const all_result_bar = document.getElementById("all-result-bar")
 let current_index = 0;
 const red_button = document.getElementById("red")
 const green_button = document.getElementById("green")
-const arr_of_question = ['Was your morning any good?','Question No. 2','Question No. 3','Question No. 4'
-,'Question No. 5','Question No. 6','Question No. 7','Question No. 8','Question No. 9','Question No. 10'];
+const arr_of_question = ['Was your morning any good?','Was today a good day?','Was there something good happened recently?','Have you achieved something big today?'
+,'Is there something good happening tonight?','Do you want this day to not go past quickly?','Are you feeling happy right now?','Did you sleep well last night?','Do you feel being loved enough today?','Are you waiting for todays lunch?'];
 let score = 0;
 let current_progress = Number(document.getElementById("bar-fill").style.width); // element to change
 const maxProgress = 10;
