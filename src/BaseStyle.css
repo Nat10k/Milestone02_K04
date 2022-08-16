@@ -109,7 +109,7 @@ nav {
     z-index: -2;
 }
 
-h1, p {
+h1,h2, p {
     color: #FFF7E1;
     text-align: center;
 }

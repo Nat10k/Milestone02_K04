@@ -1,0 +1,61 @@
+.wrap .menu ul{
+	padding: 0;
+	margin: 0;
+	width: auto;
+	height: 45px;
+	background: #60AC48;
+	overflow: hidden;
+}
+ 
+.wrap .menu ul li{ /* Supaya tulisannya jadi horizontal */
+	float: left;
+	text-align: center;
+	list-style-type: none;
+	padding: 15px;
+
+}
+
+.wrap .menu ul li {
+	color:  white;
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 12px;
+}
+
+.logohome {
+	text-align: center;
+}
+
+
+.logohome p {
+	text-align: center;
+	font-family: 'Inter', Courier, monospace;
+	font-style: normal;
+	font-weight: 400px;
+	font-size: 24px;
+	line-height: 29px;
+}
+
+#container{
+	background:linear-gradient(to top, rgba(43, 43, 43, 0.2)50%,rgba(43, 43, 43, 0.2)50%), url(QuoteBG.jpg);
+	border: 5px;
+	height: 180px;
+	width: 1111px;
+	margin: 0 auto;
+	text-align: center;
+    margin-top: 225px;
+}
+
+#output{
+	color:  #FFF7E1;
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 25px;
+}
+
+#btn{
+	background-color: #9BC53D;
+	border-color: #9BC53D;
+}
