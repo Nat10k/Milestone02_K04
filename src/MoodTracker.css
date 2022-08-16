@@ -145,8 +145,8 @@
 .hidden{
     opacity: 0;
 }
-.spin {
-    /* font-size: 40px; */
+.spin p{
+    font-size: 40px;
     animation-name: spin;
     animation-iteration-count: infinite;
     animation-duration: 2000ms;
@@ -189,7 +189,6 @@
     background-color: red;
 }
 
-.spin p {
-    color: blue;
+/* .spin p {
     font-size: 40px;
-}
+} */

@@ -88,12 +88,6 @@ const result = (score, condition) => {
     }
 }
 
-
-// function toggleHidden(doc){
-//     doc.classList.toggle("hidden")
-//     // console.log(doc.classList.contains("hidden"))
-// }
-
 const setActive = (elmt, value = true) => {
     if(value) {elmt.classList.remove("hidden"); elmt.style.pointerEvents = "initial"}
     else {elmt.classList.add("hidden"); elmt.style.pointerEvents = "none"}
@@ -150,7 +144,6 @@ const get_history = () => {
 
     result_last = history_score[history_score.length-1].toFixed(3)
     result_mean = (result_total /= history_score.length).toFixed(3)
-    // console.log(result_mean, result_total)
 
     last_result_bar.style.width = String(result_last) + "em"
     all_result_bar.style.width = String(result_mean) + "em"
@@ -159,15 +152,13 @@ const get_history = () => {
     all_result_bar.innerHTML = result_mean
 
     setActive(history_prompt)
-    // return history_score;
+    
 }
 
 window.onload = () => { // initiate
     setActive(outer_bg, false);
     setActive(prog_bar, false);
     setActive(result_prompt, false);
-    // setActive(start_prompt, false)
-
     setActive(history_prompt, false);
 }
 
