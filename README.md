@@ -29,7 +29,8 @@ Di bagian atas ada beberapa tombol yang bisa digunakan untuk navigasi website :
 
 Di Homepage, klik tombol "Press for a new quote" untuk men-generate quote positif baru.
 
-Untuk menggunakan Mood Tracker, klik tombol mulai dan jawab setiap pertanyaan yang diberikan. Di akhir akan diberikan hasil dari mood anda. (Pending Update !!!!!!)
+Untuk menggunakan Mood Tracker, klik tombol "Start Quiz!" dan jawab setiap pertanyaan yang diberikan. Di akhir akan diberikan keadaan mood anda berdasarkan hasil quiz. Untuk mengambil quiz kembali, klik tombol
+"retake quiz". Untuk melihat hasil quiz sebelumnya dan rata-rata hasil seluruh quiz anda, klik tombol "History". Untuk kembali ke Homepage, klik tombol "Back to Homepage".
 
 Untuk menggunakan E-Journal, ketik tanggal dan isi jurnal di kotak yang tersedia. Apabila jurnal sudah selesai dibuat, klik tombol Save untuk mengunduh jurnal pada perangkat yang digunakan. Sebelumnya, akan muncul prompt untuk memasukkan nama file untuk jurnal yang bersangkutan.
 
