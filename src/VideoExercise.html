@@ -5,7 +5,47 @@
         <title>Be Well</title>
         <link rel="stylesheet" href="BaseStyle.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        
+        <style>
+            .titleContainer {
+                padding-top: 15px;
+            }
+
+            .videoContainer {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .videoContainer iframe {
+                display: block;
+            }
+
+            .previous {
+                box-sizing: border-box;
+                width: 40px;
+                height: 40px;
+                border-style: solid;
+                background-color: transparent;
+                cursor: pointer;
+                display: block;
+                border-width: 20px 40px 20px 0px;
+                border-color: transparent #9BC53D transparent transparent;
+                margin-right: 20px;
+            }
+
+            .next {
+                box-sizing: border-box;
+                width: 40px;
+                height: 40px;
+                border-style: solid;
+                background-color: transparent;
+                cursor: pointer;
+                display: block;
+                border-width: 20px 0px 20px 40px;
+                border-color: transparent transparent transparent #9BC53D;
+                margin-left: 20px;
+            }
+        </style>
     </head>
     <body>
         <nav>
@@ -29,5 +69,55 @@
         </nav>
         <div class="background-rectangle">
         </div>
+        <h1>Exercise Videos</h1>
+        <p>Watch and do exercises to help you take control</p>
+        <div class="titleContainer">
+            <p id="title">Meditation Exercise</p>
+        </div>
+        <div class="videoContainer">
+            <button class="previous" id="previous"></button>
+            <iframe width="50%" height="450px" src="https://www.youtube.com/embed/86m4RC_ADEY" title="Mental Exercise Video" id="video"></iframe>
+            <button class="next" id="next"></button>
+        </div>
+
+        <script>
+            const types = ["Meditation", "Breathing", "Yoga", "Breathing Technique", "Tension Headache", "Tapping Technique to Calm Anxiety & Stress"];
+            const videos = ["https://www.youtube.com/embed/86m4RC_ADEY", "https://www.youtube.com/embed/tEmt1Znux58", "https://www.youtube.com/embed/hJbRpHZr_d0", "https://www.youtube.com/embed/CQjGqtH-2YI", "https://www.youtube.com/embed/MI9o8SOxldY", "https://www.youtube.com/embed/02bN4JFx10Y"];
+            i = 0;
+            video = document.querySelector("#video");
+            title = document.querySelector("#title");
+
+            // assign function to buttons
+            document.querySelector("#previous").addEventListener("click", previous);
+            document.querySelector("#next").addEventListener("click", next);
+
+            function next() {
+                // increment index 
+                if (i >= types.length-1) {
+                    i = 0;
+                }
+                else {
+                    i++;
+                }
+                
+                // change type and video
+                title.innerHTML = types[i] + " Exercise";
+                video.src = videos[i];
+            }
+
+            function previous() {
+                // decrement index 
+                if (i <= 0) {
+                    i = types.length-1;
+                }
+                else {
+                    i--;
+                }
+                
+                // change type and video
+                title.innerHTML = types[i] + " Exercise";
+                video.src = videos[i];
+            }
+        </script>
     </body>
 </html>
