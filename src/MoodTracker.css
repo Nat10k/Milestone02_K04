@@ -119,17 +119,19 @@
 
     border-radius: 20px;
 }
-.result-prompt{
+/* .result-prompt{
     position: absolute;
     height: 20em;
     width: 40em;
     background-color: #FAFFF0;
+
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
+
     border-radius: 20px;
-}
+} */
 .hidden{
     opacity: 0;
 }
