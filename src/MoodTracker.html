@@ -4,6 +4,7 @@
         <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1">
         <title>Be Well</title>
         <link rel="stylesheet" href="BaseStyle.css">
+        <link rel="stylesheet" href="MoodTracker.css">
     </head>
     <body>
         <nav>
@@ -26,18 +27,51 @@
             </div>
         </nav>
         <div class="background-rectangle"></div>
-
-        <main>
-            <div class="progress-bar">
+        <!-- Bagian kotak pertanyaan -->
+        <div class="main-contents">
+            <!-- Bagian untuk progress bar -->
+            <div class="prog-bar">
+                <div class="prog-bar-fill" id="bar-fill"></div>    
+            </div>
+            <div class="outer-background">
                 
+                <p class="question-bar" id="question-bar">Was your morning any good?</p>
+                <div class = "outer-background-contents">
+                    <button class="red" id="red" ></button>
+                    <button class="green" id="green" ></button>
+                </div>
             </div>
-            <div class="flashcards">
-                <div>Bagaimana mood anda hari ini?</div>
-                <div>
-                    <button></button>
-                    <button></button>
-                </div>                
+
+            <div class="start-prompt">
+                <div>Mood Tracker Quiz!</div>
+                <button id="start-button" class="default-button">Start Quiz!</button>
+                <button id="history-button" type="submit" onclick="get_history()" class="default-button">History</button>
             </div>
-        </main>
+            <div class="history-prompt">
+                <div>History</div>
+                <div> of <span></span> tests</div>
+                <div id="history-bar">
+                    <div id="last-result">
+                        <div>Last test result:</div>
+                        <div alt="barx" id="last-result-bar"></div>
+                    </div>
+                    <div id="all-result">
+                        <div>All-time result:</div>
+                        <div alt="barx" id="all-result-bar"></div>
+                    </div>
+                </div>
+                <button id="restart-button" onclick="restart()" class="default-button">Back</button>
+            </div>
+            <div class="result-prompt">
+                <div>Here's Your Result!</div>
+                <div id="result-bar">Score : </div>
+                <button id="restart-button" onclick="restart()" class="default-button">Retake Quiz!</button>
+                <a href="Homepage.html"><button type="submit" class="default-button">Back to Homepage</button></a>
+            </div>
+
+
+            <script src="MoodTracker.js"></script>
+        </div>
+        
     </body>
 </html>
