@@ -56,6 +56,8 @@ const pre_result_animation = () => {
     question_bar.style.pointerEvents = "none";
     question_bar.innerHTML = "Calculating your results";
     outer_bg_contents.classList.add('spin');
+    outer_bg_contents.style.position = "relative";
+    outer_bg_contents.style.top = "1em";
     outer_bg_contents.style.pointerEvents = "none";
     outer_bg_contents.innerHTML = '<p>|</p>'
 }
