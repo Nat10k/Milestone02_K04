@@ -4,7 +4,7 @@
 ## Judul Solusi : Be Well, Website Kesehatan Mental untuk Pelajar
 ## Kelompok 4 (Be Well) 
 
-- Anggota dan Pembagian Tugas :
+- Anggota dan Pembagian Tugas : <br />
  Nathan Tenka / 16521138 - Membuat front end page e-journal, story, video exercise, music video, dan about mental health <br />
  Anjani Ibrahim / 16521532 - Mencarikan cerita inspiratif untuk page Story <br />
  Adrian Fahri Affandi / 16521503 - Membuat Homepage <br />
