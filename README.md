@@ -19,3 +19,18 @@
  Vania Salsabila / 16521286 - Mencarikan cerita inspiratif untuk page Story <br />
  Reswara Trista Aulia C / 16521103 - Mencarikan video untuk page Video Exercises <br />
  Vincent Winarta / 16521380 - Membuat page Contact List <br />
+
+Cara kerja website Be Well :
+Di bagian atas ada beberapa tombol yang bisa digunakan untuk navigasi website :
+- Klik logo di atas kiri untuk kembali ke Homepage.
+- Klik tombol About Mental Health untuk masuk ke page yang menjelaskan tentang Mental Health.
+- Pada tombol Our Services terdapat beberapa dropdown yang akan membuka page yang bersangkutan. 
+- Tombol Contact Help akan membuka page yang berisi kontak profesional di bidang mental health.
+
+Di Homepage, klik tombol "Press for a new quote" untuk men-generate quote positif baru.
+
+Untuk menggunakan Mood Tracker, klik tombol mulai dan jawab setiap pertanyaan yang diberikan. Di akhir akan diberikan hasil dari mood anda. (Pending Update !!!!!!)
+
+Untuk menggunakan E-Journal, ketik tanggal dan isi jurnal di kotak yang tersedia. Apabila jurnal sudah selesai dibuat, klik tombol Save untuk mengunduh jurnal pada perangkat yang digunakan. Sebelumnya, akan muncul prompt untuk memasukkan nama file untuk jurnal yang bersangkutan.
+
+Pada page Inspirational Stories, Calming Music, dan Exercise Videos, klik tombol panah untuk mengganti cerita, playlist musik, atau video exercise kesehatan mental.
