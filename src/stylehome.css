@@ -44,7 +44,7 @@
 	width: 1111px;
 	margin: 0 auto;
 	text-align: center;
-    margin-top: 225px;
+    margin-top: 200px;
 }
 
 #output{
@@ -58,4 +58,8 @@
 #btn{
 	background-color: #9BC53D;
 	border-color: #9BC53D;
+}
+
+.homepageLogo {
+	height: 100px;
 }
