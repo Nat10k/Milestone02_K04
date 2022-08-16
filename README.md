@@ -13,7 +13,7 @@
  Jimly Firdaus / 16521312 - Membuat Mood Tracker <br />
  Johann Kandani / 16521466 - Membuat content page About Mental Health <br />
  Josua Adriel Sinabutar / 16521291 - Mencarikan playlist musik untuk page Calming Music <br />
- Karunia Mega Lestari / 16521130 - Membuat content page About Mental Health
+ Karunia Mega Lestari / 16521130 - Membuat content page About Mental Health <br />
  Michael Leon Putra W / 16521095 - Membuat front end page e-journal dan base template website <br />
  Nalendro N.U.A.R.F / 16521152 - Mencarikan video untuk page Video Exercises <br />
  Vania Salsabila / 16521286 - Mencarikan cerita inspiratif untuk page Story <br />
